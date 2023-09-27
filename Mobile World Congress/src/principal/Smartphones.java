@@ -1,21 +1,21 @@
 package principal;
 
-public class Smartphones extends Dispositivos{
-	
-	//variables de clase smartphones
+public class Smartphones extends Dispositivos {
+
+	// variables de clase smartphones
 	private String SO;
 	private boolean acelerometro = false;
 	private boolean gps = true;
-	
-	//constructor
-	public Smartphones( String sO, boolean acelerometro, boolean gps) {
-		super();
+
+	// constructor
+	public Smartphones(String marca, String modelo, int precio_base, String sO, boolean acelerometro, boolean gps) {
+		super(marca, modelo, precio_base);
 		SO = sO;
 		this.acelerometro = acelerometro;
 		this.gps = gps;
 	}
 
-	//constructor vacio
+	// constructor vacio
 	public Smartphones() {
 		super();
 	}
@@ -46,11 +46,8 @@ public class Smartphones extends Dispositivos{
 
 	@Override
 	public String toString() {
-		return "Smartphones [SO=" + SO + ", acelerometro=" + acelerometro + ", gps=" + gps + "]";
+		return "Smartphones [SO=" + SO + ", acelerometro=" + acelerometro + ", gps=" + gps + ", getMarca()="
+				+ getMarca() + ", getModelo()=" + getModelo() + ", getPrecio_base()=" + getPrecio_base() + "]";
 	}
-
-	
-
-	
 
 }
