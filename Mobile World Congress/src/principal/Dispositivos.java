@@ -2,27 +2,27 @@ package principal;
 
 
 /*Clase padre */
-public class Otros_DIspositivos {
+public class Dispositivos {
 
 	
 	//variables de clase
 			private String marca;
 			private String modelo;
 			private int precio_base;
-			private String descripcion;
+			
 			
 			
 			//constructor vacio
-			public Otros_DIspositivos() {}
+			public Dispositivos() {}
 				
 
 			//constructor
-			public Otros_DIspositivos(String marca, String modelo, int precio_base, String descripcion) {
+			public Dispositivos(String marca, String modelo, int precio_base) {
 				super();
 				this.marca = marca;
 				this.modelo = modelo;
 				this.precio_base = precio_base;
-				this.descripcion = descripcion;
+			
 			}
 
 			
@@ -51,20 +51,13 @@ public class Otros_DIspositivos {
 				this.precio_base = precio_base;
 			}
 
-			public String getDescripcion() {
-				return descripcion;
-			}
-
-			public void setDescripcion(String descripcion) {
-				this.descripcion = descripcion;
-			}
 
 			@Override
 			public String toString() {
-				return "dispositivos [marca=" + marca + ", modelo=" + modelo + ", precio_base=" + precio_base
-						+ ", descripcion=" + descripcion + "]";
+				return "Dispositivos [marca=" + marca + ", modelo=" + modelo + ", precio_base=" + precio_base + "]";
 			}
-			
+
+		
 			
 			
 
