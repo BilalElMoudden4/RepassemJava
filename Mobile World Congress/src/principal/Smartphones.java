@@ -1,15 +1,14 @@
 package principal;
 
-public class Smartphones {
+public class Smartphones extends Dispositivos{
 	
 	//variables de clase smartphones
 	private String SO;
 	private boolean acelerometro = false;
 	private boolean gps = true;
 	
-	
 	//constructor
-	public Smartphones(String sO, boolean acelerometro, boolean gps) {
+	public Smartphones( String sO, boolean acelerometro, boolean gps) {
 		super();
 		SO = sO;
 		this.acelerometro = acelerometro;
@@ -21,8 +20,6 @@ public class Smartphones {
 		super();
 	}
 
-	
-	//getters and setters
 	public String getSO() {
 		return SO;
 	}
@@ -51,7 +48,9 @@ public class Smartphones {
 	public String toString() {
 		return "Smartphones [SO=" + SO + ", acelerometro=" + acelerometro + ", gps=" + gps + "]";
 	}
+
 	
+
 	
 
 }
