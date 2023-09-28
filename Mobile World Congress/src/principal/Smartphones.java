@@ -1,53 +1,53 @@
-package principal;
+    package principal;
+    
+// Interfície GammaAlta
+    interface GammaAlta {
+        boolean isGammaAlta();
+    }
 
-public class Smartphones extends Dispositivos {
+// Classe Smartphone
+    class Smartphones extends Dispositivos implements GammaAlta {
+        private String sO;
+        private boolean acelerometro = false;
+        private boolean gps = true;
 
-	// variables de clase smartphones
-	private String SO;
-	private boolean acelerometro = false;
-	private boolean gps = true;
+        public Smartphones(String marca, String modelo, int precio_base, String sO, boolean acelerometro, boolean gps) {
+            super (marca, modelo, precio_base);
+            this.sO = sO;
+            this.acelerometro = acelerometro;
+            this.gps = gps;
+        }
+        
+       
 
-	// constructor
-	public Smartphones(String marca, String modelo, int precio_base, String sO, boolean acelerometro, boolean gps) {
-		super(marca, modelo, precio_base);
-		SO = sO;
-		this.acelerometro = acelerometro;
-		this.gps = gps;
-	}
+        public String getSO() {
+            return sO;
+        }
 
-	// constructor vacio
-	public Smartphones() {
-		super();
-	}
+        public void setSO(String sO) {
+            this.sO = sO;
+        }
 
-	public String getSO() {
-		return SO;
-	}
+        public boolean isAcelerometro() {
+            return acelerometro;
+        }
 
-	public void setSO(String sO) {
-		SO = sO;
-	}
+        public void setAcelerometro(boolean acelerometro) {
+            this.acelerometro = acelerometro;
+        }
 
-	public boolean isAcelerometro() {
-		return acelerometro;
-	}
+        public boolean isGps() {
+            return gps;
+        }
 
-	public void setAcelerometro(boolean acelerometro) {
-		this.acelerometro = acelerometro;
-	}
+        public void setGps(boolean gps) {
+            this.gps = gps;
+        }
+        
+        @Override
+        public String toString() {
+            return "Smartphones [SO = " + sO + ", acelerometro = " + (acelerometro?"Si":"No") + ", gps = " + (gps?"Si":"No") + ", Marca = "
+				+ getMarca() + ", Modelo = " + getModelo() + ", Precio_base = " + getPrecio_base() + "]";
+        }
+    }
 
-	public boolean isGps() {
-		return gps;
-	}
-
-	public void setGps(boolean gps) {
-		this.gps = gps;
-	}
-
-	@Override
-	public String toString() {
-		return "Smartphones [SO=" + SO + ", acelerometro=" + acelerometro + ", gps=" + gps + ", getMarca()="
-				+ getMarca() + ", getModelo()=" + getModelo() + ", getPrecio_base()=" + getPrecio_base() + "]";
-	}
-
-}
